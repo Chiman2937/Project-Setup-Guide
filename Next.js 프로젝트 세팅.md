@@ -213,18 +213,17 @@ npm install -D @types/webpack
 
 ---
 
-### ✨ Tailwind css 설정
+### ✨ tailwind css 설정
 
 <details>
-  <summary><h4>tailwind.config.ts 생성 및 적용</h4></summary>
+  <summary><h4>globals.css 설정</h4></summary>
 
-  tailwind v4 부터 globals.css 파일 상단에 아래 구문 추가
+  (tailwind v4 ~) tailwind.config.ts 사용할 경우 globals.css 파일 최상단에 아래 구문 추가
 
   ```css
   //globals.css
   @config '../../tailwind.config.ts';
   ```
-
 </details>
 
 ---
