@@ -1,6 +1,10 @@
 # 📜 Next.js 프로젝트 세팅 가이드
 
-Next.js 프로젝트 생성 부터 prettier, eslint, husky/lintStaged(pre-commit rule) 설정 가이드 입니다.
+Next.js 프로젝트 생성,
+
+prettier, eslint, husky/lintStaged(pre-commit rule) 설정
+
+React Query 초기설정 가이드
 
 <br></br>
 
