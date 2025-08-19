@@ -46,3 +46,16 @@ export default config;
 ```ts
 import '../src/app/globals.css';
 ```
+
+## 🔥 postcss.config.mjs 수정
+
+plugins 속성을 배열에서 객체 형태로 수정
+
+```ts
+export default {
+  plugins: {
+    '@tailwindcss/postcss': {},
+  },
+};
+
+```
