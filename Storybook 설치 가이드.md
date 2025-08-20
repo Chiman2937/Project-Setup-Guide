@@ -52,10 +52,11 @@ import '../src/app/globals.css';
 plugins 속성을 배열에서 객체 형태로 수정
 
 ```ts
-export default {
+const config = {
   plugins: {
     '@tailwindcss/postcss': {},
   },
 };
 
+export default config;
 ```
