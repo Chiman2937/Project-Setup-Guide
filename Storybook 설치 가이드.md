@@ -19,7 +19,7 @@ npm install --save-dev @storybook/nextjs
 ## 🔥 .storybook/main.ts 수정
 staticDirs 속성 값 `..\\public`에서 `../public`으로 수정
 ```ts
-import type { StorybookConfig } from '@storybook/nextjs-vite';
+import type { StorybookConfig } from '@storybook/nextjs';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
@@ -27,10 +27,9 @@ const config: StorybookConfig = {
     '@chromatic-com/storybook',
     '@storybook/addon-docs',
     '@storybook/addon-a11y',
-    '@storybook/addon-vitest',
   ],
   framework: {
-    name: '@storybook/nextjs-vite',
+    name: '@storybook/nextjs',
     options: {},
   },
   staticDirs: ['../public'], // '..\\public'을 '../public'으로 수정
