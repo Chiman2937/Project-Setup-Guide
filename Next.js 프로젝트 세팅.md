@@ -1,10 +1,9 @@
 # 📜 Next.js 프로젝트 세팅 가이드
 
-Next.js 프로젝트 생성,
-
-prettier, eslint, husky/lintStaged(pre-commit rule) 설정
-
-React Query 초기설정 가이드
+- Next.js 프로젝트 생성
+- prettier, eslint, husky/lintStaged(pre-commit rule) 설정
+- React Query 초기설정
+- React Components 초기설정
 
 <br></br>
 
@@ -20,6 +19,9 @@ npm install -D @typescript-eslint/eslint-plugin
 npm install -D @typescript-eslint/parser
 npm install -D eslint-config-prettier
 npm install -D prettier
+
+# TailwindCss prettier 플러그인 설치
+npm install -D prettier-plugin-tailwindcss
 
 # husky, lint-staged 설치
 npm install -D husky lint-staged
@@ -102,6 +104,8 @@ npm install @tanstack/react-query-devtools
   	"arrowParens": "always",
   	"proseWrap": "preserve",
   	"trailingComma": "all"
+    "plugins": ["prettier-plugin-tailwindcss"],
+    "tailwindFunctions": ["clsx", "cn", "classNames", "tw"]
   }
   ```
   
