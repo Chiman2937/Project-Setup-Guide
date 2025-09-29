@@ -7,7 +7,7 @@
 |날짜|수정사항|
 |---|---------|
 |2025.09.29| Tailwind CSS Prettier 설정 추가|
-||Tailwind CSS ClassName을 외부 변수에 지정하더라도 Prettier 적용가능한 설정 추가(clsx, twMerge, cn, classNames 함수 사용 필요|
+||Tailwind CSS ClassName을 외부 변수에 지정하더라도 Prettier 적용가능한 설정 추가(clsx, twMerge, cn, classNames 함수 사용 필요)|
 
 ## 라이브러리 설치 명령어 모음
 
