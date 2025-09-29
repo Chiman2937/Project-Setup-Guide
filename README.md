@@ -11,6 +11,7 @@
 |2025.09.29| Tailwind CSS Prettier 설정 추가|
 |2025.09.29|Tailwind className을 외부 변수에 지정하더라도 Prettier 적용가능한 설정 추가(clsx, twMerge, cn, classNames 함수 사용 필요)|
 |2025.09.29|.vscode/settings.json 설정 파일 추가|
+|2025.09.29| next.config: next image 관련 속성 추가|
 
 ## 📜 라이브러리 설치 명령어 모음
 
