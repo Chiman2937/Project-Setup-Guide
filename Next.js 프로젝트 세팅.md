@@ -47,11 +47,149 @@ npm i @tanstack/react-query
 npm install @tanstack/react-query-devtools
 ```
 
-<br></b가
+<br></br>
+
+## 🔥 수동 설정
+
+---
+
+### ✨ Husky/LintStaged 설정
+
+<details>
+  <summary><h4>husky pre-commit 파일 생성</h4></summary>
+  
+  ```jsx
+  // .husky/pre-commit 파일 생성
+  #!/bin/sh
+  npx lint-staged
+  ```
+</details>
+
+<details>
+  <summary><h4>package.json 파일 수정</h4></summary>
+
+  ```json
+  // package.json에 아래 내용 추가
+  // pre-commit 시 eslint, prettier를 실행
+    "lint-staged": {
+      "**/*.{js,jsx,ts,tsx}": [
+        "eslint --fix",
+        "prettier --write"
+      ],
+      "**/*.{json,css,scss,md,yml,yaml}": [
+        "prettier --write"
+      ]
+    },
+  ```
+  
+</details>
+
+---
+
+### ✨ Prettier, eslint 설정
+
+<details>
+  <summary><h4>.prettierrc 파일 추가</h4></summary>
+
+  ```json
+  // 프로젝트 최상단 경로에 .prettierrc 파일 생성
+  
+  {
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "printWidth": 100,
+  	"bracketSpacing": true,
+  	"arrowParens": "always",
+  	"proseWrap": "preserve",
+  	"trailingComma": "all"
+    "plugins": ["prettier-plugin-tailwindcss"],
+    "tailwindFunctions": ["clsx", "cn", "classNames", "tw"]
+  }
+  ```
+  
+</details>
+
+<details>
+  <summary><h4>.prettierignore 파일 추가</h4></summary>
+
+  ```bash
+  # 프로젝트 최상단 경로에 .prettierignore 파일 생성
+  
+  # 빌드 결과물
+  dist
+  build
+  coverage
+  
+  # 패키지 관리
+  node_modules
+  package-lock.json
+  yarn.lock
+  pnpm-lock.yaml
+  
+  # 설정 파일
+  *.log
+  
+  # 정적 파일
+  public
+  
+  # 환경 파일
+  .env
+  .env.*
+  
+  # 기타 무시할 항목
+  *.min.js
+  *.snap
+  ```
+
+</details>
+
+<details>
+  <summary><h4>eslint.config.mjs 파일 수정</h4></summary>
+
+  ```jsx
+  // eslint.config.mjs에 규칙 추가
+  import { dirname } from 'path';
+  import { fileURLToPath } from 'url';
+  import { FlatCompat } from '@eslint/eslintrc';
+  
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = dirname(__filename);
+  
+  const compat = new FlatCompat({
+    baseDirectory: __dirname,
+  });
+  
+  const eslintConfig = [
+    ...compat.extends('next/core-web-vitals', 'next/typescript'),
+    {
+      rules: {
+        'no-unused-vars': 'off', // JS용 기본 비활성화
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
+        ],
+      },
+    },
+  ];
+  
+  export default eslintConfig;
+  
+  ```
+  
+</details>
+
+<details>
+  <summary><h4>.vscode/settings.json 파일 추가</h4></summary>
+
+  ```json
+  // 프로젝트 최상단 경로에 .vscode/settings.json 파일 추가
   {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
+  
   ```
   
 </details>
@@ -123,7 +261,7 @@ npm install @tanstack/react-query-devtools
 <details>
   <summary><h4>provider 생성</h4></summary>
 
-  RootLayout에서는 QueryClientProvider 삽입 및 useState 선언이 불가하므로, provider를 따로 만들어서 RootLayout에 주입
+  RootLayout에서는 QueryClientProvider 삽입 및 useState 선언이 불가하므로 provider를 따로 만들어서 RootLayout에 주입
   참고자료: https://tanstack.com/query/latest/docs/framework/react/guides/advanced-ssr
 
   `/app/Providers.tsx`
