@@ -199,14 +199,27 @@ npm install @tanstack/react-query-devtools
 ### ✨ React Component(SVGR) 설정
 
 <details>
-  <summary><h4>next.config.ts 파일 수정</h4></summary>
+  <summary><h4>next.config 파일 수정</h4></summary>
 
-  ```tsx
+  `next.config.ts`와 `next.config.js` 중 택1
+  ```ts
   // next.config.ts
   import type { NextConfig } from 'next';
   import type { Configuration as WebpackConfig } from 'webpack';
   
   const nextConfig: NextConfig = {
+    images: {
+      //이미지 경로는 사양에 맞게 수정하여 적용
+      remotePatterns: {
+        protocol: 'https',
+        hostname: 'sprint-fe-project.s3.ap-northeast-2.amazonaws.com',
+        port: '',
+        pathname: '/**',
+      },
+      //imagesSizes, deviceSizes는 기본 설정
+      imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+      deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    },
     webpack(config: WebpackConfig) {
       config.module?.rules?.push({
         test: /\.svg$/,
@@ -219,7 +232,34 @@ npm install @tanstack/react-query-devtools
   
   export default nextConfig;
   ```
+  ```js
+  // next.config.js
+  const nextConfig = {
+    images: {
+      //이미지 경로는 사양에 맞게 수정하여 적용
+      remotePatterns: {
+        protocol: 'https',
+        hostname: 'sprint-fe-project.s3.ap-northeast-2.amazonaws.com',
+        port: '',
+        pathname: '/**',
+      },
+      //imagesSizes, deviceSizes는 기본 설정
+      imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+      deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    },
+    webpack(config) {
+      config.module?.rules?.push({
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      });
   
+      return config;
+    },
+  };
+  
+  export default nextConfig;
+
+  ```
 </details>
 
 <details>
