@@ -45,7 +45,7 @@ npm install -D @types/webpack
 
 # 서버 상태 관리를 위한 React Query 설치
 # React Query
-npm i @tanstack/react-query
+npm install @tanstack/react-query
 # React Query Dev tool
 npm install @tanstack/react-query-devtools
 ```
