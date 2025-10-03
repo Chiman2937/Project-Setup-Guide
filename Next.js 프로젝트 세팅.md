@@ -220,7 +220,7 @@ npm install @tanstack/react-query-devtools
   // 프로젝트 최상단 경로에 .vscode/settings.json 파일 추가
   {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": "explicit"
     }
