@@ -327,12 +327,12 @@ npm install @tanstack/react-query-devtools
 <details>
   <summary><h4>globals.css 설정</h4></summary>
 
-  (tailwind v4 ~) tailwind.config.ts 사용할 경우 globals.css 파일 최상단에 아래 구문 추가
+  (tailwind v4 ~) tailwind.config.ts 사용할 경우 globals.css 파일 상단에 config import 구문 추가
 
   ```css
   //globals.css
   @import 'tailwindcss';
-  @config '../../tailwind.config.ts';
+  @config '../../tailwind.config.ts'; // 이부분
   
   :root {
     --background: #ffffff;
