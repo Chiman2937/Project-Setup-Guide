@@ -340,17 +340,18 @@ npm install @tanstack/react-query-devtools
 ### ✨ React Query 설정
 
 <details>
-  <summary><h4>provider 생성</h4></summary>
+  <summary><h4>QueryProvider.tsx 생성</h4></summary>
 
   RootLayout에서는 QueryClientProvider 삽입 및 useState 선언이 불가하므로 provider를 따로 만들어서 RootLayout에 주입
-  참고자료: https://tanstack.com/query/latest/docs/framework/react/guides/advanced-ssr
+  > 참고자료: https://tanstack.com/query/latest/docs/framework/react/guides/advanced-ssr
 
-  `/app/Providers.tsx`
+  `src/providers/QueryProvider.tsx`
   ```tsx
   'use client';
-  import { getQueryClient } from '@/lib/queryClient';
   import { QueryClientProvider } from '@tanstack/react-query';
   import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+  
+  import { getQueryClient } from '@/lib/queryClient';
   
   interface Props {
     children: React.ReactNode;
@@ -366,8 +367,28 @@ npm install @tanstack/react-query-devtools
       </QueryClientProvider>
     );
   };
-
   ```
+</details>
+
+<details>
+  <summary><h4>Providers.tsx 생성</h4></summary>
+
+
+`src/app/Providers.tsx`
+```tsx
+'use client';
+import { QueryProvider } from '@/providers/QueryProvider';
+
+interface Props {
+  children: React.ReactNode;
+}
+
+export const Providers = ({ children }: Props) => {
+  return <QueryProvider>{children}</QueryProvider>;
+};
+
+```
+
 </details>
 
 <details>
@@ -387,15 +408,13 @@ npm install @tanstack/react-query-devtools
     children: React.ReactNode;
   }>) {
     return (
-      <html lang="en">
+      <html lang="ko">
         <body>
           <Providers>{children}</Providers> // 여기에 주입
         </body>
       </html>
     );
   }
-
-
   ```
 </details>
 
