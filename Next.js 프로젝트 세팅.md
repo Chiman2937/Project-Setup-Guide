@@ -512,3 +512,18 @@ export const primary = localFont({
 
 </details>
 
+<details>
+  <summary><h4>RootLayout 수정</h4></summary>
+
+  primary font를 body className에 지정
+  - className: 해당 폰트를 요소에 직접 적용 (즉시 사용)
+  - variable: CSS 변수만 생성 (필요할 때 선택적으로 사용)
+```tsx
+  ...
+  <body
+    className={`${primary.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
+  >
+  ...
+```
+  
+</details>
