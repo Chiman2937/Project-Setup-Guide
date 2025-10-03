@@ -106,7 +106,7 @@ npm install @tanstack/react-query-devtools
   	"bracketSpacing": true,
   	"arrowParens": "always",
   	"proseWrap": "preserve",
-  	"trailingComma": "all"
+  	"trailingComma": "all",
     "plugins": ["prettier-plugin-tailwindcss"],
     "tailwindFunctions": ["clsx", "cn", "classNames", "tw"]
   }
