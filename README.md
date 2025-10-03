@@ -13,6 +13,8 @@
 |2025.09.29|`.vscode/settings.json` 설정 파일 추가|
 |2025.09.29| `next.config`: next image 관련 속성 추가|
 |2025.10.03| `eslint.config.mjs` import 순서 정렬 구문 추가</br> import 순서: </br>1. `css`</br>2. `next` </br>3. `next type` </br>4. `react` </br>5. `react type` </br>6. `third part` </br>7. `local file(@ alias path)` </br>8. `local file(relative path)`|
+|2025.10.03|`next-local-font` 폰트 설정 방법 추가|
+|2025.10.03|`tailwind.config.ts` 템플릿 추가|
 
 ## 📜 라이브러리 설치 명령어 모음
 
