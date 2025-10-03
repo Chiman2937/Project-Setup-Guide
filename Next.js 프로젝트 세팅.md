@@ -205,7 +205,6 @@ npm install @tanstack/react-query-devtools
         'simple-import-sort/exports': 'error',
       },
     },
-    ...storybook.configs['flat/recommended'],
   ];
   
   export default eslintConfig;
