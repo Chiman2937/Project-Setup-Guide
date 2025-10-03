@@ -10,8 +10,9 @@
 |---|---------|
 |2025.09.29| Tailwind CSS Prettier 설정 추가|
 |2025.09.29|Tailwind className을 외부 변수에 지정하더라도 Prettier 적용가능한 설정 추가(clsx, twMerge, cn, classNames 함수 사용 필요)|
-|2025.09.29|.vscode/settings.json 설정 파일 추가|
-|2025.09.29| next.config: next image 관련 속성 추가|
+|2025.09.29|`.vscode/settings.json` 설정 파일 추가|
+|2025.09.29| `next.config`: next image 관련 속성 추가|
+|2025.10.03| import 순서 정렬 구문 추가(eslint)</br> import 순서: </br>1. `css`</br>2. `next` </br>3. `next type` </br>4. `react` </br>5. `react type` </br>6. `third part` </br>7. `local file(@ alias path)` </br>8. `local file(relative path)`|
 
 ## 📜 라이브러리 설치 명령어 모음
 
