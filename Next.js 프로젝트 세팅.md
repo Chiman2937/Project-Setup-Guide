@@ -445,3 +445,70 @@ export const Providers = ({ children }: Props) => {
 </details>
 
 ---
+### ✨ Font 설정
+
+<details>
+  <summary><h4>font.ts 생성</h4></summary>
+
+- 폰트 저장: `src/assets/fonts/`
+
+`src/app/font.ts` - variable font일 경우
+```ts
+export const primary = localFont({
+  src: '../assets/fonts/PretendardVariable.woff2',
+  variable: '--font-pretendard',
+  display: 'swap',
+});
+```
+
+`src/app/font.ts` - static font일 경우
+```ts
+import localFont from 'next/font/local';
+
+export const primary = localFont({
+  src: [
+    {
+      path: '../assets/fonts/Pretendard-Thin.subset.woff2',
+      weight: '100',
+    },
+    {
+      path: '../assets/fonts/Pretendard-ExtraLight.subset.woff2',
+      weight: '200',
+    },
+    {
+      path: '../assets/fonts/Pretendard-Light.subset.woff2',
+      weight: '300',
+    },
+    {
+      path: '../assets/fonts/Pretendard-Regular.subset.woff2',
+      weight: '400',
+    },
+    {
+      path: '../assets/fonts/Pretendard-Medium.subset.woff2',
+      weight: '500',
+    },
+    {
+      path: '../assets/fonts/Pretendard-SemiBold.subset.woff2',
+      weight: '600',
+    },
+    {
+      path: '../assets/fonts/Pretendard-Bold.subset.woff2',
+      weight: '700',
+    },
+    {
+      path: '../assets/fonts/Pretendard-ExtraBold.subset.woff2',
+      weight: '800',
+    },
+    {
+      path: '../assets/fonts/Pretendard-Black.subset.woff2',
+      weight: '900',
+    },
+  ],
+  variable: '--font-pretendard',
+  display: 'swap',
+});
+
+```
+
+</details>
+
