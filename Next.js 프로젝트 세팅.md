@@ -246,12 +246,14 @@ npm install @tanstack/react-query-devtools
   const nextConfig: NextConfig = {
     images: {
       //이미지 경로는 사양에 맞게 수정하여 적용
-      remotePatterns: {
-        protocol: 'https',
-        hostname: 'sprint-fe-project.s3.ap-northeast-2.amazonaws.com',
-        port: '',
-        pathname: '/**',
-      },
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'sprint-fe-project.s3.ap-northeast-2.amazonaws.com',
+          port: '',
+          pathname: '/**',
+        },
+      ],
       //imagesSizes, deviceSizes는 기본 설정
       imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
       deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -267,18 +269,21 @@ npm install @tanstack/react-query-devtools
   };
   
   export default nextConfig;
+
   ```
   ```js
   // next.config.js
   const nextConfig = {
     images: {
       //이미지 경로는 사양에 맞게 수정하여 적용
-      remotePatterns: {
-        protocol: 'https',
-        hostname: 'sprint-fe-project.s3.ap-northeast-2.amazonaws.com',
-        port: '',
-        pathname: '/**',
-      },
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'sprint-fe-project.s3.ap-northeast-2.amazonaws.com',
+          port: '',
+          pathname: '/**',
+        },
+      ],
       //imagesSizes, deviceSizes는 기본 설정
       imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
       deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
