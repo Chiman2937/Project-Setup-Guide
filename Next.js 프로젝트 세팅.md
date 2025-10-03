@@ -527,3 +527,14 @@ export const primary = localFont({
 ```
   
 </details>
+
+<details>
+  <summary><h4>tailwind config 수정</h4></summary>
+  
+  ```ts
+  fontFamily: {
+    primary: ['var(--font-primary)'],
+  },
+  ```
+
+</details>
