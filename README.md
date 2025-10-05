@@ -15,6 +15,7 @@
 |2025.10.03| `eslint.config.mjs` import 순서 정렬 구문 추가</br> import 순서: </br>1. `css`</br>2. `next` </br>3. `next type` </br>4. `react` </br>5. `react type` </br>6. `third part` </br>7. `local file(@ alias path)` </br>8. `local file(relative path)`|
 |2025.10.03|`next-local-font` 폰트 설정 방법 추가|
 |2025.10.03|`tailwind.config.ts` 템플릿 추가|
+|2025.10.05|`eslint.config.mjs` JSX 속성 정렬 구문 추가</br> 정렬 순서: </br>1. `key`</br>2. `ref`</br>3. `id`</br>4. `className`</br>5. `style`</br>6. `etc`(알파벳 순 정렬) </br>7. `callback`(event handler)|
 
 ## 📜 라이브러리 설치 명령어 모음
 
