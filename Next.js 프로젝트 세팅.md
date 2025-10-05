@@ -154,6 +154,7 @@ npm install @tanstack/react-query-devtools
 <details>
   <summary><h4>eslint.config.mjs 파일 수정</h4></summary>
 - 2025.10.03: import 정렬 구문 추가
+  
 - 2025.10.05: JSX 정렬 구문 추가
   
   ```jsx
