@@ -26,6 +26,9 @@ npm install -D prettier-plugin-tailwindcss
 # import 구문 정렬 eslint 규칙 설치
 npm install -D eslint-plugin-simple-import-sort
 
+# Component/element 속성 정렬 eslint 규칙 설치
+npm install -D eslint-plugin-perfectionist
+
 # husky, lint-staged 설치
 npm install -D husky lint-staged
 
