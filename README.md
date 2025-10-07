@@ -12,10 +12,10 @@
 |2025.09.29|Tailwind className을 외부 변수에 지정하더라도 Prettier 적용가능한 설정 추가(clsx, twMerge, cn, classNames 함수 사용 필요)|
 |2025.09.29|`.vscode/settings.json` 설정 파일 추가|
 |2025.09.29| `next.config`: next image 관련 속성 추가|
-|2025.10.03| `eslint.config.mjs` import 순서 정렬 구문 추가</br> import 순서: </br>1. `css`</br>2. `next` </br>3. `next type` </br>4. `react` </br>5. `react type` </br>6. `third part` </br>7. `local file(@ alias path)` </br>8. `local file(relative path)`|
+|2025.10.03| `eslint.config.mjs` import 순서 자동 정렬 구문 추가</br> import 순서: </br>1. `css`</br>2. `next` </br>3. `next type` </br>4. `react` </br>5. `react type` </br>6. `third part` </br>7. `local file(@ alias path)` </br>8. `local file(relative path)`|
 |2025.10.03|`next-local-font` 폰트 설정 방법 추가|
 |2025.10.03|`tailwind.config.ts` 템플릿 추가|
-|2025.10.05|`eslint.config.mjs` JSX 속성 정렬 구문 추가</br> 정렬 순서: </br>1. `key`</br>2. `ref`</br>3. `id`</br>4. `className`</br>5. `style`</br>6. `etc`(알파벳 순 정렬) </br>7. `callback`(event handler)|
+|2025.10.05|`eslint.config.mjs` JSX 속성 자동 정렬 구문 추가</br> 정렬 순서: </br>1. `key`</br>2. `ref`</br>3. `id`</br>4. `className`</br>5. `style`</br>6. `etc`(알파벳 순 정렬) </br>7. `callback`(event handler)|
 |2025.10.06|`QueryProvider` 구문 누락 건 수정</br>- `src/lib/queryclient.ts` 파일 추가|
 
 ## 📜 라이브러리 설치 명령어 모음
