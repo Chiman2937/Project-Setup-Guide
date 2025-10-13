@@ -4,7 +4,9 @@
 ## 📜 Next.js 프로젝트 세팅 가이드
 [[🔗 Next 프로젝트 세팅 가이드]](https://github.com/Chiman2937/Project-Setup-Guide/blob/main/Next.js%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%84%B8%ED%8C%85.md)
 
-### 🔧 변경사항
+<details>
+  <summary><h3>🔧 변경사항</h3></summary>
+
 
 |날짜|변경사항|
 |---|---------|
@@ -17,6 +19,9 @@
 |2025.10.03|`tailwind.config.ts` 템플릿 추가|
 |2025.10.05|`eslint.config.mjs` JSX 속성 자동 정렬 구문 추가</br> 정렬 순서: </br>1. `key`</br>2. `ref`</br>3. `id`</br>4. `className`</br>5. `style`</br>6. `etc`(알파벳 순 정렬) </br>7. `callback`(event handler)|
 |2025.10.06|`QueryProvider` 구문 누락 건 수정</br>- `src/lib/queryclient.ts` 파일 추가|
+
+  
+</details>
 
 ## 📜 라이브러리 설치 명령어 모음
 
