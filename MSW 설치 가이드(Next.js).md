@@ -151,3 +151,29 @@ if (typeof window === 'undefined') {
 
 ```
 </details>
+
+## 🔥 파일 수정(`RootLayout`)
+
+<details>
+  <summary><h4>RootLayout</h4></summary>
+
+```tsx
+// src/app/layout.tsx
+import { MSWProvider } from '@/msw/MSWProvider';
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="ko">
+      <body>
+        <MSWProvider>{children}</MSWProvider>
+      </body>
+    </html>
+  );
+}
+```
+  
+</details>
