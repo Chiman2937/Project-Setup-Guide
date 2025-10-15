@@ -395,32 +395,33 @@ export default eslintConfig;
 
   `/tailwind.config.ts`
   ```ts
-  import { type Config } from 'tailwindcss';
-  
-  const config: Config = {
-    content: ['./src/**/*.{js,ts,jsx,tsx}', './src/**/*.svg', './styles//*.{css,scss}'],
-    theme: {
-      extend: {
-        colors: {
-          white: '#ffffff',
-          black: '#000000',
-          'primary': {
-            100: '#fffcf2',
-            200: '#ffe59e',
-          },
-        fontFamily: {
-          primary: ['var(--font-primary)'],
-        },
-  
-        fontSize: {
-          h1: ['32px', { lineHeight: '39px', fontWeight: 'normal' }],
+import { type Config } from 'tailwindcss';
+
+const config: Config = {
+  content: ['./src/**/*.{js,ts,jsx,tsx}', './src/**/*.svg', './styles//*.{css,scss}'],
+  theme: {
+    extend: {
+      colors: {
+        white: '#ffffff',
+        black: '#000000',
+        primary: {
+          100: '#fffcf2',
+          200: '#ffe59e',
         },
       },
+      fontFamily: {
+        primary: ['var(--font-primary)'],
+      },
+
+      fontSize: {
+        h1: ['32px', { lineHeight: '39px', fontWeight: 'normal' }],
+      },
     },
-    plugins: [],
-  };
-  
-  export default config;
+  },
+  plugins: [],
+};
+
+export default config;
 
   ```
   
