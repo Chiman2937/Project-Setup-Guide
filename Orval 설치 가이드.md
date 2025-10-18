@@ -163,7 +163,7 @@ export const httpClient = async <T>(config: BaseAPIConfig): Promise<T> => {
 <details>
   <summary><h4>tsconfig.ts 수정</h4></summary>
 
-  - 오류 현상: `httpClient.ts`에 동적 import 적용 시 orval api 생성 오류 발생
+  - 문제: `httpClient.ts`에 동적 import 적용 시 orval api 생성 오류 발생
   - 원인: 동적 import 가 ES6(ES2020)에 도입되었으나 next.js 프로젝트 생성 시 tsconfig.ts의 compilerOptions.target이 `ES2017`로 지정되어있어 `npm run generate:api` 실행 시 오류 발생
   - 해결: `tsconfig.ts`의 compilerOptions.target 속성의 값을 `ES2022`로 변경
 
