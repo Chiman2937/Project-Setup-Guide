@@ -19,7 +19,9 @@
 |2025.10.03|`tailwind.config.ts` 템플릿 추가|
 |2025.10.05|`eslint.config.mjs` JSX 속성 자동 정렬 구문 추가</br> 정렬 순서: </br>1. `key`</br>2. `ref`</br>3. `id`</br>4. `className`</br>5. `style`</br>6. `etc`(알파벳 순 정렬) </br>7. `callback`(event handler)|
 |2025.10.06|`QueryProvider` 구문 누락 건 수정</br>- `src/lib/queryclient.ts` 파일 추가|
-
+|2025.11.12|`next 16` migration|
+|2025.11.12|`font.ts`에 variable weight 설정 추가|
+|2025.11.12|`tailwind.config.ts` 삭제 - globals.css로 대체|
   
 </details>
 
