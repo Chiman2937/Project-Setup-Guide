@@ -30,9 +30,16 @@
 ## 📜 라이브러리 세팅 가이드
 #### [[🔗 Storybook 설치 가이드]](https://github.com/Chiman2937/Project-Setup-Guide/blob/main/Storybook%20%EC%84%A4%EC%B9%98%20%EA%B0%80%EC%9D%B4%EB%93%9C(Next.js).md)
 
+<details>
+  <summary><h3>🔧 변경사항</h3></summary>
+
+
 |날짜|변경사항|
 |---|---------|
-|2025.09.29| main.ts 설정 변경: Framework를 nextjs-vite 에서 nextjs 로 수정 |
+|2025.09.29| main.ts 설정 변경: </br> - Framework를 nextjs-vite 에서 nextjs 로 수정 |
+|2025.11.12| preview.ts 설정 변경: </br> - next local font className 전역설정 구문 추가 |
+
+</details>
 
 #### [[🔗 MSW 설치 가이드]](https://github.com/Chiman2937/Project-Setup-Guide/blob/main/MSW%20%EC%84%A4%EC%B9%98%20%EA%B0%80%EC%9D%B4%EB%93%9C(Next.js).md)
 
