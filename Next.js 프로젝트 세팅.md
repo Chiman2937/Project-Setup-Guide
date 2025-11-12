@@ -592,24 +592,13 @@ export const primary = localFont({
 
   primary font를 body className에 지정
   - className: 해당 폰트를 요소에 직접 적용 (즉시 사용)
-  - variable: CSS 변수만 생성 (필요할 때 선택적으로 사용)
+  - variable: CSS 변수만 생성 (tailwind 유틸리티 변수 사용을 위해 추가 필요)
 ```tsx
   ...
   <body
-    className={`${primary.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
+    className={`${primary.className} ${primary.variable} antialiased`}
   >
   ...
 ```
   
-</details>
-
-<details>
-  <summary><h4>tailwind config 수정</h4></summary>
-  
-  ```ts
-  fontFamily: {
-    primary: ['var(--font-primary)'],
-  },
-  ```
-
 </details>
