@@ -526,9 +526,11 @@ export const Providers = ({ children }: Props) => {
 - 폰트 저장: `src/assets/fonts/`
 
 `src/app/font.ts` - variable font일 경우
+- 2025.11.12: src 내부에 variable weight 추가
+
 ```ts
-export const primary = localFont({
-  src: '../assets/fonts/PretendardVariable.woff2',
+export const pretendard = localFont({
+  src: [{ path: '../assets/fonts/PretendardVariable.woff2', weight: '45 920' }],
   variable: '--font-pretendard',
   display: 'swap',
 });
